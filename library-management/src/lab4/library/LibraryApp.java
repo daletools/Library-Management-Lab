@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class LibraryApp {
-
+/*
  private ArrayList<String> availableBooks = new ArrayList<>();
  private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
 
@@ -73,10 +73,22 @@ public void showMembers() {
    for (String member : memberBorrowedBooks.keySet()) {
        System.out.println(member);
    }
-}
+}*/
   
 public static void main(String[] args) {
 	
+	//Actual functionality:
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	 LibraryApp library = new LibraryApp();
 
 	 System.out.println(" *** Library management system demo *** ");
@@ -142,6 +154,9 @@ public static void main(String[] args) {
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
     library.showAvailableBooks();
-
+*/
+	
+	
+	
 	}
 }
