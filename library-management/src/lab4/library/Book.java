@@ -7,7 +7,7 @@ public class Book {
 	private String title;
 	private boolean isAvailable;
 
-	// TODO: implement Book functionality
+	// DONE: implement Book functionality
 	public Book(String title) {
 		this.title = title;
 		this.isAvailable = true;
@@ -20,5 +20,8 @@ public class Book {
 	public boolean isAvailable() {
 		return isAvailable;
 	}
-
+	
+	public void setAvailable() {
+		isAvailable = !isAvailable;
+	}
 }
