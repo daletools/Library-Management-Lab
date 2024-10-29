@@ -22,8 +22,8 @@ public class LibrarianController {
 	public void returnBook(Book b, Member m) {
 		m.returnBook(b);
 	}
-	public void showBooks() {
-		library.showBooks();
+	public void showAvailableBooks() {
+		library.showAvailableBooks();
 	}
 	public void showMembers() {
 		library.showMembers;
