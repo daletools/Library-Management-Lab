@@ -21,7 +21,7 @@ public class Book {
 		return isAvailable;
 	}
 	
-	public void setAvailable() {
-		isAvailable = !isAvailable;
+	public void setAvailable(boolean b) {
+		isAvailable = b;
 	}
 }
