@@ -30,6 +30,7 @@ public class Member {
 		if (book.isAvailable()) {
 			book.setAvailable();
 			borrowedBooks.add(book);
+			System.out.println(this + ", has borrowed " + book);
 		} else {
 			System.out.println("Book is not available.");
 		}
@@ -39,6 +40,7 @@ public class Member {
 		if (borrowedBooks.contains(book)) {
 			book.setAvailable();
 			borrowedBooks.remove(book);
+			System.out.println(this + ", has returned " + book);
 		} else {
 			System.out.println("Member does not have book borrowed.");
 		}
