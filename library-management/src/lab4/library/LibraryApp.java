@@ -94,7 +94,7 @@ public static void main(String[] args) {
 	library.addMember(alice);
 	library.addMember(bob);
 	
-	library.showMembers();
+	library.showAllMembers();
 	
 	library.borrowBook(dune, alice);
 	library.showAvailableBooks();
