@@ -30,4 +30,7 @@ public class Book {
 	public void setAvailable() {
 		isAvailable = !isAvailable;
 	}
+	public String toString() {
+		return title;
+	}
 }
