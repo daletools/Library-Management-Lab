@@ -10,7 +10,6 @@ public class Member {
 	private String name;
 	private ArrayList<Book> borrowedBooks;
 
-	// TODO: implement functionality of Member class
 	public Member(int memberID, String name) {
 		this.memberID = memberID;
 		this.name = name;
@@ -26,12 +25,12 @@ public class Member {
 	}
 
 	public void borrowBook(Book book) {
-		book.isAvailable(false);
+		book.setAvailable();
 		borrowedBooks.add(book);
 	}
 
 	public void returnBook(Book book) {
-		book.isAvailable(true);
+		book.setAvailable();
 		borrowedBooks.remove(book);
 	}
 
