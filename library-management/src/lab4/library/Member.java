@@ -43,4 +43,9 @@ public class Member {
 			System.out.println("Member does not have book borrowed.");
 		}
 	}
+
+	@Override
+	public String toString() {
+		return name + ", ID#" + memberID;
+	}
 }

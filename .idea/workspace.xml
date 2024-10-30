@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b10cb3b9-421b-42a8-b7e8-b1d2ca5fe7e9" name="Changes" comment="Basic Member methods" />
+    <list default="true" id="b10cb3b9-421b-42a8-b7e8-b1d2ca5fe7e9" name="Changes" comment="Basic Member methods">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-management/src/lab4/library/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/lab4/library/Member.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,22 +28,22 @@
     &quot;assignee&quot;: &quot;daletools&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/daletools/Library-Management-Lab.git",
-    "accountId": "2f53b351-28f9-4f1f-b7a7-9f52e79f2271"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/daletools/Library-Management-Lab.git&quot;,
+    &quot;accountId&quot;: &quot;2f53b351-28f9-4f1f-b7a7-9f52e79f2271&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "daletools",
-    "repository": "Library-Management-Lab"
+    &quot;owner&quot;: &quot;daletools&quot;,
+    &quot;repository&quot;: &quot;Library-Management-Lab&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -50,7 +54,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LibraryApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dale-dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/dale/Projects/236-OOSAD/Library-Management-Lab",
     "node.js.detected.package.eslint": "true",
@@ -59,8 +65,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
