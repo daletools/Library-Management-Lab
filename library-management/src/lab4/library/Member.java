@@ -6,12 +6,14 @@ public class Member {
 
 	// GRASP Principle: Information Expert and Low Coupling
 	// Can borrow and return books.
+	private static int incrementID = 0;
 	private int memberID;
 	private String name;
 	private ArrayList<Book> borrowedBooks;
 
-	public Member(int memberID, String name) {
-		this.memberID = memberID;
+	public Member(String name) {
+		incrementID++;
+		memberID = incrementID;
 		this.name = name;
 		this.borrowedBooks = new ArrayList<>();
 	}
@@ -25,13 +27,20 @@ public class Member {
 	}
 
 	public void borrowBook(Book book) {
-		book.setAvailable();
-		borrowedBooks.add(book);
+		if (book.isAvailable()) {
+			book.setAvailable();
+			borrowedBooks.add(book);
+		} else {
+			System.out.println("Book is not available.");
+		}
 	}
 
 	public void returnBook(Book book) {
-		book.setAvailable();
-		borrowedBooks.remove(book);
+		if (borrowedBooks.contains(book)) {
+			book.setAvailable();
+			borrowedBooks.remove(book);
+		} else {
+			System.out.println("Member does not have book borrowed.");
+		}
 	}
-
 }
