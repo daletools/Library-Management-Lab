@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class LibraryApp {
-
+/*
  private ArrayList<String> availableBooks = new ArrayList<>();
  private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
 
@@ -73,10 +73,41 @@ public void showMembers() {
    for (String member : memberBorrowedBooks.keySet()) {
        System.out.println(member);
    }
-}
+}*/
   
 public static void main(String[] args) {
 	
+	//Our version of the code:
+	LibrarianController library = new LibrarianController(new Library());
+	Book dune = new Book("Dune", "Frank Herbert");
+	Book _1984 = new Book("1984", "George Orwell");
+	Book mobyDick = new Book("Moby Dick", "Herman Melville");
+			
+	library.addBook(dune);
+	library.addBook(_1984); 
+	library.addBook(mobyDick);
+	library.showAvailableBooks();
+	
+	Member alice = new Member("Alice");
+	Member bob = new Member("Bob");
+	
+	library.addMember(alice);
+	library.addMember(bob);
+	
+	library.showMembers();
+	
+	library.borrowBook(dune, alice);
+	library.showAvailableBooks();
+	library.borrowBook(_1984, bob);
+	library.showAvailableBooks();
+	library.borrowBook(dune, bob);
+	library.showAvailableBooks();
+	library.returnBook(dune, alice);
+	library.showAvailableBooks();
+	library.borrowBook(dune, bob);
+	library.showAvailableBooks();
+	
+	/*
 	 LibraryApp library = new LibraryApp();
 
 	 System.out.println(" *** Library management system demo *** ");
@@ -142,6 +173,9 @@ public static void main(String[] args) {
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
     library.showAvailableBooks();
-
+*/
+	
+	
+	
 	}
 }
