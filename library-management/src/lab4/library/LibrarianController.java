@@ -25,8 +25,8 @@ public class LibrarianController {
 	public void showAvailableBooks() {
 		library.showAvailableBooks();
 	}
-	public void showMembers() {
-		library.showMembers;
+	public void showAllMembers() {
+		library.showAllMembers();
 	}
 	public void addBook(Book b) {
 		library.addBook(b);
