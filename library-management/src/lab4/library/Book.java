@@ -18,7 +18,7 @@ public class Book {
 	public String getTitle() {
 		return title;
 	}
-	
+
 	public String getAuthor() {
 		return author;
 	}
@@ -26,10 +26,11 @@ public class Book {
 	public boolean isAvailable() {
 		return isAvailable;
 	}
-	
+
 	public void setAvailable() {
 		isAvailable = !isAvailable;
 	}
+
 	public String toString() {
 		return title;
 	}

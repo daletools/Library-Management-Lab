@@ -28,13 +28,11 @@ public class Library {
 		return members;
 	}
 
-	// Adds a book to the library catalog
 	public void addBook(Book book) {
 		catalog.add(book);
 		System.out.println(book + " has been added to the catalog.");
 	}
 
-	// Adds a new member to the library
 	public void addMember(Member member) {
 		if (!members.contains(member)) {
 			members.add(member);
@@ -44,7 +42,6 @@ public class Library {
 		}
 	}
 
-	// Show the available books in the library
 	public void showAvailableBooks() {
 		System.out.println("Available Books:");
 		for (Book book : catalog) {
@@ -54,11 +51,17 @@ public class Library {
 		}
 	}
 
-	// Show members of in the library
 	public void showAllMembers() {
 		System.out.println("Library members:");
 		for (Member member : members) {
 			System.out.println(member);
+		}
+	}
+
+	public void displayCatalog() {
+		System.out.println("All Books:");
+		for (Book book : catalog) {
+			System.out.println(book);
 		}
 	}
 
@@ -70,7 +73,7 @@ public class Library {
 			System.out.println("The book " + book + " is not in the catalog.");
 		}
 	}
-	
+
 	public void removeMember(Member member) {
 		if (members.contains(member)) {
 			members.remove(member);
@@ -79,7 +82,27 @@ public class Library {
 			System.out.println("Member " + member + " is not registered.");
 		}
 	}
-	
-	
+
+	public Member findMember(String name) {
+		for (Member member : members) {
+			if (member.getName().equals(name)) {
+				System.out.println("Found member: " + member);
+				return member;
+			}
+		}
+		System.out.println("Member with name " + name + " not found.");
+		return null;
+	}
+
+	public Book findBook(String title) {
+		for (Book book : catalog) {
+			if (book.getTitle().equals(title)) {
+				System.out.println("Found book: " + book);
+				return book;
+			}
+		}
+		System.out.println("Book with title " + title + " not found.");
+		return null;
+	}
 
 }
