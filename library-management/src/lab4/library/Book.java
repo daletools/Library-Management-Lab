@@ -31,7 +31,8 @@ public class Book {
 		isAvailable = !isAvailable;
 	}
 
+	@Override
 	public String toString() {
-		return title;
+		return title + " by " + author + (isAvailable ? " (Available)" : " (Borrowed)");
 	}
 }
