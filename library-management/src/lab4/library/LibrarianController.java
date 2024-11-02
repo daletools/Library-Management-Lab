@@ -17,11 +17,23 @@ public class LibrarianController {
 	}
 
 	// change following method names to match the final method name sin the classes
-	public void borrowBook(Book b, Member m) {
+	public void borrowBook(String title, String name) {
+		Book b = library.findBookbyTitle(title);
+		Member m = library.findMemberByName(name);
+		if (b == null || m == null) {
+			System.out.println("Book or Member cannot be null.");
+			return;
+		}
 		m.borrowBook(b);
 	}
 
-	public void returnBook(Book b, Member m) {
+	public void returnBook(String title, String name) {
+		Book b = library.findBookbyTitle(title);
+		Member m = library.findMemberByName(name);
+		if (b == null || m == null) {
+			System.out.println("Book or Member cannot be null.");
+			return;
+		}
 		m.returnBook(b);
 	}
 
@@ -34,27 +46,44 @@ public class LibrarianController {
 	}
 
 	public void addBook(Book b) {
-		library.addBook(b);
+		if (b != null) {
+			library.addBook(b);
+		} else {
+			System.out.println("Book cannot be null.");
+		}
+
 	}
 
-	public void addMember(Member m) {
-		library.addMember(m);
+	public void registerMember(Member m) {
+		if (m != null) {
+			library.registerMember(m);
+		} else {
+			System.out.println("Member cannot be null.");
+		}
 	}
 
 	public void removeBook(Book b) {
-		library.removeBook(b);
+		if (b != null) {
+			library.removeBook(b);
+		} else {
+			System.out.println("Book cannot be null.");
+		}
 	}
 
-	public void removemember(Member m) {
-		library.removeMember(m);
+	public void removeMember(Member m) {
+		if (m != null) {
+			library.removeMember(m);
+		} else {
+			System.out.println("Member cannot be null.");
+		}
 	}
 
-	public Member findMember(String name) {
-		return library.findMember(name);
+	public Member findMemberByName(String name) {
+		return library.findMemberByName(name);
 	}
 
-	public Book findBook(String title) {
-		return library.findBook(title);
+	public Book findBookbyTitle(String title) {
+		return library.findBookbyTitle(title);
 	}
 
 	public void displayCatalog() {

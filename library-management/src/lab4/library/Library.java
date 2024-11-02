@@ -33,7 +33,7 @@ public class Library {
 		System.out.println(book + " has been added to the catalog.");
 	}
 
-	public void addMember(Member member) {
+	public void registerMember(Member member) {
 		if (!members.contains(member)) {
 			members.add(member);
 			System.out.println("Member " + member + " has been added.");
@@ -83,7 +83,7 @@ public class Library {
 		}
 	}
 
-	public Member findMember(String name) {
+	public Member findMemberByName(String name) {
 		for (Member member : members) {
 			if (member.getName().equals(name)) {
 				System.out.println("Found member: " + member);
@@ -94,7 +94,7 @@ public class Library {
 		return null;
 	}
 
-	public Book findBook(String title) {
+	public Book findBookbyTitle(String title) {
 		for (Book book : catalog) {
 			if (book.getTitle().equals(title)) {
 				System.out.println("Found book: " + book);

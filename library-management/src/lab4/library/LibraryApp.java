@@ -18,15 +18,15 @@ public class LibraryApp {
 		// Add and Remove a Member
 		System.out.println("Adding a Member:");
 		System.out.println("----------------");
-		library.addMember(alice);
-		library.addMember(bob);
-		library.addMember(carl);
+		library.registerMember(alice);
+		library.registerMember(bob);
+		library.registerMember(carl);
 		library.showAllMembers();
 
 		System.out.println();
 		System.out.println("Removing a Member:");
 		System.out.println("------------------");
-		library.removemember(carl);
+		library.removeMember(carl);
 		library.showAllMembers();
 
 		System.out.println();
@@ -49,19 +49,21 @@ public class LibraryApp {
 		System.out.println();
 
 		// Borrow and Return a Book
-		library.borrowBook(dune, alice);
+		System.out.println("Borrow and Return a Book:");
+		System.out.println("-------------------------");
+		library.borrowBook("Dune", "Alice");
 		library.showAvailableBooks();
 		System.out.println();
-		library.borrowBook(_1984, bob);
+		library.borrowBook("1984", "Bob");
 		library.showAvailableBooks();
 		System.out.println();
-		library.borrowBook(dune, bob);
+		library.borrowBook("Dune", "Bob");
 		library.showAvailableBooks();
 		System.out.println();
-		library.returnBook(dune, alice);
+		library.returnBook("Dune", "Alice");
 		library.showAvailableBooks();
 		System.out.println();
-		library.borrowBook(dune, bob);
+		library.borrowBook("Dune", "Bob");
 		System.out.println();
 		library.showAvailableBooks();
 		System.out.println();
@@ -72,9 +74,9 @@ public class LibraryApp {
 		// Lookup a book and member
 		System.out.println("Lookup a Book and Member:");
 		System.out.println("-------------------------");
-		library.findMember("Alice");
-		library.findMember("Henry");
-		library.findBook("Moby Dick");
-		library.findBook("Harry Potter");
+		library.findMemberByName("Alice");
+		library.findMemberByName("Henry");
+		library.findBookbyTitle("Moby Dick");
+		library.findBookbyTitle("Harry Potter");
 	}
 }
