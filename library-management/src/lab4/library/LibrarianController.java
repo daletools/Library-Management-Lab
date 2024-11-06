@@ -7,7 +7,7 @@ public class LibrarianController {
 	// Delegates tasks to the appropriate objects.
 	private Library library;
 
-	// TODO: implement functionality of Member class
+	// DONE: implement functionality of Member class
 	public LibrarianController(Library library) {
 		this.library = library;
 	}
@@ -16,77 +16,37 @@ public class LibrarianController {
 		return library;
 	}
 
-	// change following method names to match the final method name sin the classes
-	public void borrowBook(String title, String name) {
-		Book b = library.findBookbyTitle(title);
-		Member m = library.findMemberByName(name);
-		if (b == null || m == null) {
-			System.out.println("Book or Member cannot be null.");
-			return;
-		}
+	public void borrowBook(Book b, Member m) {
 		m.borrowBook(b);
 	}
-
-	public void returnBook(String title, String name) {
-		Book b = library.findBookbyTitle(title);
-		Member m = library.findMemberByName(name);
-		if (b == null || m == null) {
-			System.out.println("Book or Member cannot be null.");
-			return;
-		}
+	public void returnBook(Book b, Member m) {
 		m.returnBook(b);
 	}
-
 	public void showAvailableBooks() {
 		library.showAvailableBooks();
 	}
-
+	public void displayCatalogue() {
+		library.displayCatalog();
+	}
 	public void showAllMembers() {
 		library.showAllMembers();
 	}
-
 	public void addBook(Book b) {
-		if (b != null) {
-			library.addBook(b);
-		} else {
-			System.out.println("Book cannot be null.");
-		}
-
+		library.addBook(b);
 	}
-
 	public void registerMember(Member m) {
-		if (m != null) {
-			library.registerMember(m);
-		} else {
-			System.out.println("Member cannot be null.");
-		}
+		library.registerMember(m);
 	}
-
 	public void removeBook(Book b) {
-		if (b != null) {
-			library.removeBook(b);
-		} else {
-			System.out.println("Book cannot be null.");
-		}
+		library.removeBook(b);
 	}
-
 	public void removeMember(Member m) {
-		if (m != null) {
-			library.removeMember(m);
-		} else {
-			System.out.println("Member cannot be null.");
-		}
+		library.removeMember(m);
 	}
-
-	public Member findMemberByName(String name) {
-		return library.findMemberByName(name);
+	public Member findMemberByName(String s) {
+		return library.findMemberByName(s);
 	}
-
-	public Book findBookbyTitle(String title) {
-		return library.findBookbyTitle(title);
-	}
-
-	public void displayCatalog() {
-		library.displayCatalog();
+	public Book findBookByTitle(String s) {
+		return library.findBookbyTitle(s);
 	}
 }

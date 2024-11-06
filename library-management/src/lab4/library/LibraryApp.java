@@ -38,36 +38,36 @@ public class LibraryApp {
 		library.addBook(_1984);
 		library.addBook(mobyDick);
 		library.addBook(fahrenheight451);
-		library.displayCatalog();
+		library.showAvailableBooks();
 
 		System.out.println();
 		System.out.println("Removing a Book:");
 		System.out.println("----------------");
 		library.removeBook(fahrenheight451);
-		library.showAvailableBooks();
+		library.displayCatalogue();
 
 		System.out.println();
 
 		// Borrow and Return a Book
 		System.out.println("Borrow and Return a Book:");
 		System.out.println("-------------------------");
-		library.borrowBook("Dune", "Alice");
+		library.borrowBook(dune, alice);
 		library.showAvailableBooks();
 		System.out.println();
-		library.borrowBook("1984", "Bob");
+		library.borrowBook(_1984, bob);
 		library.showAvailableBooks();
 		System.out.println();
-		library.borrowBook("Dune", "Bob");
+		library.borrowBook(dune, bob);
 		library.showAvailableBooks();
 		System.out.println();
-		library.returnBook("Dune", "Alice");
+		library.returnBook(dune, alice);
 		library.showAvailableBooks();
 		System.out.println();
-		library.borrowBook("Dune", "Bob");
+		library.borrowBook(dune, bob);
 		System.out.println();
 		library.showAvailableBooks();
 		System.out.println();
-		library.displayCatalog();
+		library.displayCatalogue();
 
 		System.out.println();
 
@@ -76,7 +76,7 @@ public class LibraryApp {
 		System.out.println("-------------------------");
 		library.findMemberByName("Alice");
 		library.findMemberByName("Henry");
-		library.findBookbyTitle("Moby Dick");
-		library.findBookbyTitle("Harry Potter");
+		library.findBookByTitle("Moby Dick");
+		library.findBookByTitle("Harry Potter");
 	}
 }
